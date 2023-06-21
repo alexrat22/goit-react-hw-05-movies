@@ -1,4 +1,5 @@
 import {
+  Title,
   Container,
   MovieList,
   MovieLink,
@@ -7,22 +8,25 @@ import {
 
 const TrendMovieList = ({ movies }) => {
   return (
-    <Container>
-      {movies.map(movie => {
-        return (
-          <MovieLink key={movie.id}>
-            <MovieList>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                alt={movie.title}
-                width="250"
-              />
-              <MovieTitle>{movie.title}</MovieTitle>
-            </MovieList>
-          </MovieLink>
-        );
-      })}
-    </Container>
+    <>
+      <Title>Trending today</Title>
+      <Container>
+        {movies.map(movie => {
+          return (
+            <MovieLink key={movie.id} to={`${movie.id}`}>
+              <MovieList>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt={movie.title}
+                  width="250"
+                />
+                <MovieTitle>{movie.title}</MovieTitle>
+              </MovieList>
+            </MovieLink>
+          );
+        })}
+      </Container>
+    </>
   );
 };
 

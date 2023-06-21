@@ -18,3 +18,11 @@ export const getTrendMovies = async () => {
   );
   return response.data;
 };
+
+export const getSearchMovie = async movieName => {
+  const response = await axios.get(
+    `${BASE_URL}search/movie?query=${movieName}&page=1`,
+    options
+  );
+  return response.data;
+};

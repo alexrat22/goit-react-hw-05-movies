@@ -9,7 +9,6 @@ const Home = () => {
     getTrendMovies()
       .then(response => {
         setTrendMovies(response.results);
-        console.log(response.results);
       })
       .catch(err => console.error(err));
   }, []);

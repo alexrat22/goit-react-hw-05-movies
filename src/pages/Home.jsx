@@ -1,4 +1,4 @@
-import TrendMovieList from 'components/TrendMovieList';
+import TrendMovieList from 'components/TrendMovieList/TrendMovieList';
 import { useState, useEffect } from 'react';
 import { getTrendMovies } from 'services/api';
 

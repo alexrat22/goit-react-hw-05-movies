@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Movies from './pages/Movies';
+import Home from '../pages/Home';
+import Movies from '../pages/Movies';
 
 export const App = () => {
   return (

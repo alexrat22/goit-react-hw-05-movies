@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MovieItemMainInfo from 'components/MovieItemMainInfo/MovieItemMainInfo';
 import MovieItemAddInfo from 'components/MovieItemAddInfo/MovieItemAddInfo';
-import {} from './MovieItem.styled';
 
 const MovieItem = () => {
   const [movie, setMovie] = useState(null);

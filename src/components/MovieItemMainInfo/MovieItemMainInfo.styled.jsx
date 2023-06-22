@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const MainContainer = styled.div`
   display: flex;
-  margin-left: 20px;
+  margin-left: 40px;
 `;
 
 export const InfoContainer = styled.div`
@@ -10,7 +10,7 @@ export const InfoContainer = styled.div`
 `;
 
 export const Overview = styled.p`
-  width: 1000px;
+  width: 95%;
   text-align: justify;
 `;
 

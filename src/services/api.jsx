@@ -39,3 +39,11 @@ export const getMovieCastInfo = async movieId => {
   );
   return response.data;
 };
+
+export const getMovieReviews = async movieId => {
+  const response = await axios.get(
+    `${BASE_URL}movie/${movieId}/reviews`,
+    options
+  );
+  return response.data;
+};

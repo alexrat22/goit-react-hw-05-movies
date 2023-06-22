@@ -1,3 +1,4 @@
+import defaultImage from '../../images/default-image.jpg';
 import {
   MainContainer,
   InfoContainer,
@@ -9,13 +10,15 @@ import {
 const MovieItemMainInfo = ({ movie }) => {
   return (
     <MainContainer>
-      <div>
+      {movie.poster_path ? (
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           alt={movie.title}
           width="250"
         />
-      </div>
+      ) : (
+        <img src={defaultImage} alt={movie.title} width="250" height="375" />
+      )}
 
       <InfoContainer>
         <h2>{movie.title}</h2>

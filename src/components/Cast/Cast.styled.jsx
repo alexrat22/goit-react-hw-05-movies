@@ -11,3 +11,8 @@ export const Actor = styled.p`
   text-align: center;
   margin: 5px 0;
 `;
+
+export const Info = styled.p`
+  font-weight: 600;
+  margin-left: 40px;
+`;

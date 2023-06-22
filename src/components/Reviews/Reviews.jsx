@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '../../services/api';
 import { ReviewItem } from './Reviews.styled';
+import { Info } from '../Cast/Cast.styled';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState(null);
@@ -25,7 +26,7 @@ const Reviews = () => {
 
   return (
     <>
-      {reviews && (
+      {reviews ? (
         <ul>
           {reviews.map(review => {
             return (
@@ -36,6 +37,8 @@ const Reviews = () => {
             );
           })}
         </ul>
+      ) : (
+        <Info>We don't have any reviews to this movie</Info>
       )}
     </>
   );

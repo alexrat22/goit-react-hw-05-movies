@@ -17,6 +17,7 @@ const TrendMovieList = ({ movies }) => {
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
                   width="250"
+                  height="350"
                 />
                 <MovieTitle>{movie.title}</MovieTitle>
               </MovieList>

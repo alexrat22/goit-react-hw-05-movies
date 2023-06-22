@@ -26,3 +26,8 @@ export const getSearchMovie = async movieName => {
   );
   return response.data;
 };
+
+export const getMovieItem = async movieId => {
+  const response = await axios.get(`${BASE_URL}movie/${movieId}`, options);
+  return response.data;
+};

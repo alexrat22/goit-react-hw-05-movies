@@ -1,11 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-export const Title = styled.h1`
-  text-align: center;
-  margin: 0;
-`;
-
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;

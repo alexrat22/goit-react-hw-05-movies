@@ -1,5 +1,4 @@
 import {
-  Title,
   Container,
   MovieList,
   MovieLink,
@@ -9,7 +8,6 @@ import {
 const TrendMovieList = ({ movies }) => {
   return (
     <>
-      <Title>Trending today</Title>
       <Container>
         {movies.map(movie => {
           return (

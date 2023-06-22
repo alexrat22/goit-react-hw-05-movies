@@ -11,6 +11,7 @@ export const Input = styled.input`
   margin-right: 10px;
   border: transparent;
   border-radius: 4px;
+  outline: none;
 `;
 
 export const InputButton = styled.button`
@@ -22,7 +23,7 @@ export const InputButton = styled.button`
   cursor: pointer;
 
   :hover {
-    background-color: #a8c8ffff;
+    background-color: rgba(86, 141, 229, 1);
     color: #fff;
   }
 `;

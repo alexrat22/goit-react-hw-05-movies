@@ -6,7 +6,7 @@ export const Header = styled.div`
   margin-bottom: 10px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-  background-color: rgb(210, 210, 210);
+  background-color: rgba(86, 141, 229, 1);
 `;
 
 export const StyledLink = styled(NavLink)`

@@ -20,7 +20,7 @@ export const MovieLink = styled(Link)`
   text-decoration: none;
   color: black;
   & :hover {
-    background-color: #a8c8ffff;
+    background-color: rgba(86, 141, 229, 1);
   }
 `;
 

@@ -1,6 +1,7 @@
 import {
   MainContainer,
   InfoContainer,
+  Overview,
   Genres,
   GenreItem,
 } from './MovieItemMainInfo.styled';
@@ -22,10 +23,10 @@ const MovieItemMainInfo = ({ movie }) => {
           <b>User score: </b>
           {movie.vote_average}
         </p>
-        <p>
+        <Overview>
           <b>Overview: </b>
           {movie.overview}
-        </p>
+        </Overview>
         <p>
           <b>Genres: </b>
         </p>

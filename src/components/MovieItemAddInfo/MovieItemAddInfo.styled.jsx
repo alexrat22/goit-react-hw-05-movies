@@ -9,7 +9,7 @@ export const AddList = styled.ul`
   display: flex;
   font-weight: 700;
 
-  & :first-child {
+  & :first-of-type {
     margin: 0 15px;
   }
 `;

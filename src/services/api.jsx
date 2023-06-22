@@ -31,3 +31,11 @@ export const getMovieItem = async movieId => {
   const response = await axios.get(`${BASE_URL}movie/${movieId}`, options);
   return response.data;
 };
+
+export const getMovieCastInfo = async movieId => {
+  const response = await axios.get(
+    `${BASE_URL}movie/${movieId}/credits`,
+    options
+  );
+  return response.data;
+};

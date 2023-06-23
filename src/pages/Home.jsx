@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <>
       <Title>Trending today</Title>
-      {trendMovies && <TrendMovieList movies={trendMovies} />}
+      {trendMovies && <TrendMovieList movies={trendMovies} path="movies/" />}
       {visibleLoader && <Loader />}
     </>
   );

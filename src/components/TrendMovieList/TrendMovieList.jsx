@@ -6,13 +6,13 @@ import {
   MovieTitle,
 } from './TrendMovieList.styled';
 
-const TrendMovieList = ({ movies }) => {
+const TrendMovieList = ({ movies, path }) => {
   return (
     <>
       <Container>
         {movies.map(movie => {
           return (
-            <MovieLink key={movie.id} to={`${movie.id}`}>
+            <MovieLink key={movie.id} to={`${path}${movie.id}`}>
               <MovieList>
                 {movie.poster_path ? (
                   <img

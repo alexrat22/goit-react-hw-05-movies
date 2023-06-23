@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCastInfo } from '../../services/api';
+import Loader from '../Loader/Loader';
 import { CastList, Actor, Info } from './Cast.styled';
 import defaultImage from '../../images/default-image.jpg';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
   const { movieId } = useParams();
+  const [visibleLoader, setVisibleLoader] = useState(false);
 
   useEffect(() => {
+    setVisibleLoader(true);
+
     if (!movieId) {
       return;
     }
@@ -17,12 +21,14 @@ const Cast = () => {
       .then(response => {
         if (response.cast.length < 1) {
           setCast(null);
+          setVisibleLoader(false);
           return;
         }
         setCast(response.cast);
+        setVisibleLoader(false);
       })
       .catch(err => console.error(err));
-  });
+  }, [movieId]);
 
   return (
     <>
@@ -56,6 +62,7 @@ const Cast = () => {
       ) : (
         <Info>We don't have any cast-info to this movie</Info>
       )}
+      {visibleLoader && <Loader />}
     </>
   );
 };

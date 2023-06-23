@@ -43,7 +43,7 @@ const Movies = () => {
     <>
       <ToastContainer autoClose={2500} />
       <SearchForm onSubmit={onFormSubmit} />
-      {movies && <TrendMovieList movies={movies} />}
+      {movies && <TrendMovieList movies={movies} path="" />}
       {visibleLoader && <Loader />}
     </>
   );

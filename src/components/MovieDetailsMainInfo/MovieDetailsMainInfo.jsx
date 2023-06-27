@@ -5,7 +5,7 @@ import {
   Overview,
   Genres,
   GenreItem,
-} from './MovieItemMainInfo.styled';
+} from './MovieDetailsMainInfo.styled';
 
 const MovieItemMainInfo = ({ movie }) => {
   return (

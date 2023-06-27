@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { AddTitle, AddList, Link } from './MovieItemAddInfo.styled';
+import { AddTitle, AddList, Link } from './MovieDetailsAddInfo.styled';
 
 const MovieItemAddInfo = () => {
   return (

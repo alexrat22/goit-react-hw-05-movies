@@ -3,8 +3,8 @@ import { useParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Loader from '../Loader/Loader';
 import BackLink from 'components/BackLink/BackLink';
-import MovieItemMainInfo from 'components/MovieItemMainInfo/MovieItemMainInfo';
-import MovieItemAddInfo from 'components/MovieItemAddInfo/MovieItemAddInfo';
+import MovieItemMainInfo from 'components/MovieDetailsMainInfo/MovieDetailsMainInfo';
+import MovieItemAddInfo from 'components/MovieDetailsAddInfo/MovieDetailsAddInfo';
 
 const MovieItem = () => {
   const [movie, setMovie] = useState(null);

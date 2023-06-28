@@ -1,6 +1,6 @@
 import { getMovieItem } from '../../services/api';
 import { useParams, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Loader from '../Loader/Loader';
 import BackLink from 'components/BackLink/BackLink';
 import MovieItemMainInfo from 'components/MovieDetailsMainInfo/MovieDetailsMainInfo';
@@ -12,7 +12,7 @@ const MovieItem = () => {
 
   const { movieId } = useParams();
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/';
+  const backLinkHref = useRef(location.state?.from ?? '/');
 
   useEffect(() => {
     setVisibleLoader(true);
@@ -26,7 +26,7 @@ const MovieItem = () => {
 
   return (
     <>
-      <BackLink to={backLinkHref}>Go back</BackLink>
+      <BackLink to={backLinkHref.current}>Go back</BackLink>
       {movie && <MovieItemMainInfo movie={movie} />}
       {movie && <MovieItemAddInfo />}
       {visibleLoader && <Loader />}

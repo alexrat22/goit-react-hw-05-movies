@@ -2,10 +2,14 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { lazy } from 'react';
 import { getSearchMovie } from '../services/api';
 import SearchForm from '../components/SearchBar/SearchBar';
-import TrendMovieList from '../components/TrendMovieList/TrendMovieList';
 import Loader from '../components/Loader/Loader';
+
+const TrendMovieList = lazy(() =>
+  import('../components/TrendMovieList/TrendMovieList')
+);
 
 const Movies = () => {
   const [movies, setMovies] = useState(null);

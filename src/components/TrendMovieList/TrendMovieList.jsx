@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import defaultImage from '../../images/default-image.jpg';
 import {
   Container,
@@ -7,12 +8,17 @@ import {
 } from './TrendMovieList.styled';
 
 const TrendMovieList = ({ movies, path }) => {
+  const location = useLocation();
   return (
     <>
       <Container>
         {movies.map(movie => {
           return (
-            <MovieLink key={movie.id} to={`${path}${movie.id}`}>
+            <MovieLink
+              key={movie.id}
+              to={`${path}${movie.id}`}
+              state={{ from: location }}
+            >
               <MovieList>
                 {movie.poster_path ? (
                   <img

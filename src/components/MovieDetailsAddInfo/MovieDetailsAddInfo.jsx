@@ -1,4 +1,6 @@
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
+import Loader from 'components/Loader/Loader';
 import { AddTitle, AddList, Link } from './MovieDetailsAddInfo.styled';
 
 const MovieItemAddInfo = () => {
@@ -15,7 +17,9 @@ const MovieItemAddInfo = () => {
           <Link to="reviews">Reviews</Link>
         </li>
       </AddList>
-      <Outlet />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };

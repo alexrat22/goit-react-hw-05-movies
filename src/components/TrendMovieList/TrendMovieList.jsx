@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import defaultImage from '../../images/default-image.jpg';
 import {
   Container,
@@ -43,6 +44,17 @@ const TrendMovieList = ({ movies, path }) => {
       </Container>
     </>
   );
+};
+
+TrendMovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string,
+    }).isRequired
+  ).isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default TrendMovieList;

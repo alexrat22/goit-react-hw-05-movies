@@ -6,7 +6,7 @@ import BackLink from 'components/BackLink/BackLink';
 import MovieItemMainInfo from 'components/MovieDetailsMainInfo/MovieDetailsMainInfo';
 import MovieItemAddInfo from 'components/MovieDetailsAddInfo/MovieDetailsAddInfo';
 
-const MovieItem = () => {
+const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const [visibleLoader, setVisibleLoader] = useState(false);
 
@@ -34,4 +34,4 @@ const MovieItem = () => {
   );
 };
 
-export default MovieItem;
+export default MovieDetails;

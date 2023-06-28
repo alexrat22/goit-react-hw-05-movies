@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import defaultImage from '../../images/default-image.jpg';
 import {
   MainContainer,
@@ -41,6 +42,21 @@ const MovieItemMainInfo = ({ movie }) => {
       </InfoContainer>
     </MainContainer>
   );
+};
+
+MovieItemMainInfo.propTypes = {
+  movie: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    overview: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired
+    ),
+  }).isRequired,
 };
 
 export default MovieItemMainInfo;
